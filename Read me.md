@@ -1,3 +1,7 @@
+# Me
+Hello! If you’re enjoying the script and feel like supporting the work that went into it, consider buying me a coffee ☕
+https://buymeacoffee.com/core_scripts
+
 # Core Ads
 
 A job-based advertisement system for FiveM QBCore servers that allows whitelisted jobs to broadcast messages to all players with custom branding.
@@ -60,3 +64,7 @@ The advertisement will be displayed to all players with the job's branding.
 ## Support
 
 For issues or questions, please contact the developer.
+
+## Note
+
+More changes to come, I don't like the way the script is rn..
