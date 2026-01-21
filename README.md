@@ -61,11 +61,6 @@ The advertisement will be displayed to all players with the job's branding.
 - Place images in the `html/images/` folder
 - Reference the exact filename in `config.lua`
 
-## Credits
-
-- **Framework**: QB-Core
-- **Developer**: Chris Newman / Core
-
 ## Support
 
 For issues or suggestions, please open an issue on the GitHub repository.
@@ -74,7 +69,10 @@ For issues or suggestions, please open an issue on the GitHub repository.
 
 More changes to come, I don't like the way the script is rn..
 
----
+## Credits
+
+- **Framework**: QB-Core
+- **Developer**: ChrisNewmanDev
 
 ## Changelog
 

@@ -3,7 +3,7 @@ lua54 'yes'
 game 'gta5'
 
 description 'Core Ads'
-author 'Core Scripts'
+author 'ChrisNewmanDev'
 version '1.0.0'
 
 client_scripts {

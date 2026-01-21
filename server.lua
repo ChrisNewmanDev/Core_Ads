@@ -1,8 +1,8 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
 local CURRENT_VERSION = "1.0.0"
-local RESOURCE_NAME = "Core_Ads"
-local VERSION_CHECK_URL = "https://raw.githubusercontent.com/ChrisNewmanDev/Core_Ads/main/version.json"
+local RESOURCE_NAME = "core_ads"
+local VERSION_CHECK_URL = "https://raw.githubusercontent.com/ChrisNewmanDev/core_ads/main/version.json"
 
 local function ParseVersion(version)
     local major, minor, patch = version:match('(%d+)%.(%d+)%.(%d+)')
@@ -88,7 +88,7 @@ local function CheckVersion()
                 end
             end
             
-            print('^2Download: ^7https://github.com/ChrisNewmanDev/Core_Ads/releases/latest')
+            print('^2Download: ^7https://github.com/ChrisNewmanDev/core_ads/releases/latest')
         end
         
         print('^3========================================^7')
