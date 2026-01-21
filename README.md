@@ -73,3 +73,16 @@ For issues or suggestions, please open an issue on the GitHub repository.
 ## Note
 
 More changes to come, I don't like the way the script is rn..
+
+---
+
+## Changelog
+
+### Version 1.0.0 (2026-01-21)
+- Initial release
+- Job-based advertisement system
+- Grade requirements for authorization
+- Custom branding for each job
+- Discord webhook logging
+- Configurable display settings
+- Modern animated UI
