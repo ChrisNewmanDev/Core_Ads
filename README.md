@@ -6,6 +6,13 @@ https://buymeacoffee.com/core_scripts
 
 A job-based advertisement system for FiveM QBCore servers that allows whitelisted jobs to broadcast messages to all players with custom branding.
 
+## Pictures
+
+![core_ads_1](https://i.postimg.cc/BnR27DMt/core_ads_1.png)
+
+![core_ads_2](https://i.postimg.cc/BnR27DMt/core_ads_2.png)
+
+
 ## Features
 
 - **Job-Based Authorization** - Only specific jobs can send advertisements
