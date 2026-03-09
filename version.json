@@ -1,23 +1,16 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "changelog": {
-        "1.0.0": {
-            "date": "2026-01-21",
+        "1.0.1": {
+            "date": "2026-03-09",
             "changes": [
-                "Initial release",
-                "Advertisement system with cooldowns",
-                "Discord webhook integration",
-                "QBCore integration",
-                "Modern UI interface"
+                "Added cooldown feature for ads per job."
             ],
             "files_to_update": [
                 "fxmanifest.lua",
                 "config.lua",
-                "client.lua",
                 "server.lua",
-                "html/ui.html",
-                "html/style.css",
-                "html/script.js"
+                "README.md"
             ]
         }
     }

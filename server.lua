@@ -1,6 +1,6 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
-local CURRENT_VERSION = "1.0.0"
+local CURRENT_VERSION = "1.0.1"
 local RESOURCE_NAME = "core_ads"
 local VERSION_CHECK_URL = "https://raw.githubusercontent.com/ChrisNewmanDev/core_ads/main/version.json"
 
@@ -147,6 +147,9 @@ local function SendWebhookLog(playerName, identifier, job, message)
     })
 end
 
+-- Tracks the last ad timestamp (os.time) per job name
+local jobCooldowns = {}
+
 -- Server event to handle ad requests
 RegisterNetEvent('core-ads:server:sendAd', function(message)
     local src = source
@@ -172,12 +175,35 @@ RegisterNetEvent('core-ads:server:sendAd', function(message)
         return
     end
 
+    -- Check per-job cooldown
+    local cooldown = jobConfig.cooldown ~= nil and jobConfig.cooldown or Config.DefaultCooldown
+    if cooldown > 0 then
+        local lastUsed = jobCooldowns[playerJob]
+        if lastUsed then
+            local elapsed = os.time() - lastUsed
+            if elapsed < cooldown then
+                local remaining = cooldown - elapsed
+                local mins = math.floor(remaining / 60)
+                local secs = remaining % 60
+                local timeStr = mins > 0 and (mins .. "m " .. secs .. "s") or (secs .. "s")
+                TriggerClientEvent('QBCore:Notify', src, "Your job must wait " .. timeStr .. " before sending another advertisement", "error")
+                return
+            end
+        end
+    end
+
     -- Prepare ad data
     local adData = {
         logo = jobConfig.logo,
         label = jobConfig.label,
         message = message
     }
+
+    -- Record cooldown timestamp for this job
+    local cooldown = jobConfig.cooldown ~= nil and jobConfig.cooldown or Config.DefaultCooldown
+    if cooldown > 0 then
+        jobCooldowns[playerJob] = os.time()
+    end
 
     -- Send ad to all players
     TriggerClientEvent('core-ads:client:displayAd', -1, adData)

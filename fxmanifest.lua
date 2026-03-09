@@ -4,7 +4,7 @@ game 'gta5'
 
 description 'Core Ads'
 author 'ChrisNewmanDev'
-version '1.0.0'
+version '1.0.1'
 
 client_scripts {
     'client.lua',

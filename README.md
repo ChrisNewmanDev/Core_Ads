@@ -21,6 +21,7 @@ A job-based advertisement system for FiveM QBCore servers that allows whiteliste
 - **Discord Webhook Logging** - Track all advertisements sent
 - **Configurable Display** - Adjust display time and positioning
 - **Beautiful UI** - Clean, modern interface with animated timer bar
+- **Cooldowns** - Cooldowns
 
 ## Requirements
 
@@ -80,14 +81,3 @@ More changes to come, I don't like the way the script is rn..
 
 - **Framework**: QB-Core
 - **Developer**: ChrisNewmanDev
-
-## Changelog
-
-### Version 1.0.0 (2026-01-21)
-- Initial release
-- Job-based advertisement system
-- Grade requirements for authorization
-- Custom branding for each job
-- Discord webhook logging
-- Configurable display settings
-- Modern animated UI

@@ -6,6 +6,10 @@ Config.WebhookURL = "webhook_here"
 -- Duration ads stay on screen (in milliseconds)
 Config.DisplayTime = 6000
 
+-- Default cooldown between ads per job (in seconds). Set to 0 to disable.
+-- You can override this per job with a "cooldown" key in Config.AllowedAds.
+Config.DefaultCooldown = 300 --for each job, not global cooldown
+
 --(must be PNGs in html/images/)
 -- Whitelisted jobs, logo, label, and minimum grade allowed to advertise.
 --TAKE NOTE, I had to remove the appropriate names for shops etc cause of that TOS / copyright stuff.
@@ -13,7 +17,8 @@ Config.AllowedAds = {
     ["burgershop"] = {				--Job name.
         label = "Burgershop",		--Display label.
         logo = "burgershop.png",	--Logo name in images folder.
-		minGrade = 1				--Minimum job grade you need to be to advertise.
+		minGrade = 1--,				--Minimum job grade you need to be to advertise.
+     -- cooldown = 120              --Optional: per-job cooldown override in seconds.
     },
     ["catshop"] = {
         label = "Cat Shop",
